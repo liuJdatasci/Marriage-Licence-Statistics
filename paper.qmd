@@ -42,6 +42,6 @@ cleaned_data |>
   labs(x = "Civic Centre", y = "Number of Marriages")
 
 ```
-
+The North York Civic Center has the most marriages, followed by Toronto, followed by Scarborough.
 
 
