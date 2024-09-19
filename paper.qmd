@@ -1,0 +1,47 @@
+---
+title: "Number of marriages registered at different civic centres"
+# subtitle: "My subtitle if needed"
+author: 
+  - Jasmine Liu
+thanks: "Used starter folder here: https://github.com/rohanalexander/starter_folder. Data from: https://open.toronto.ca/dataset/marriage-licence-statistics/"
+date: today
+date-format: long
+abstract: "This paper explores the distribution of marriages registered at different civic centers"
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+
+cleaned_data <- read_csv("data/analysis_data/analysis_data.csv")
+
+cleaned_data
+```
+
+
+# Introduction
+
+
+This paper explores the distribution of marriages registered at different civic centers, the data is explored here @sec-data.
+
+
+
+# Data {#sec-data}
+
+```{r}
+cleaned_data |>
+  ggplot(mapping = aes(x = civic_centre)) +
+  geom_bar() +
+  theme_minimal() +
+  labs(x = "Civic Centre", y = "Number of Marriages")
+
+```
+
+
+

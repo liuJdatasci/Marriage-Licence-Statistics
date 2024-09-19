@@ -1,11 +1,11 @@
 #### Preamble ####
-# Purpose: Simulates... [...UPDATE THIS...]
+# Purpose: Simulates data for marriage licence
 # Author: Jasmine Liu
 # Date: 19 Sept 2023
 # Contact: jasmine.liu@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: Sketched a desired analysis dataset and a planned graph.
+# Any other information needed? None
 
 
 #### Workspace setup ####
@@ -15,12 +15,13 @@ library(tidyverse)
 
 set.seed(888)
 
-# Define the start and end dates
 
-data <-
+#### Simulate data ####
+simulated_data <- 
   tibble(
-    date = ,
-    number_of_marriage = rpois(n = 100, lambda = 15)
+    date = seq(as.Date('2023/01/01'), as.Date('2023/12/31'), by="day"),
+    num_marriages = rpois(365, lambda = 10)
   )
 
 
+write.csv(simulated_data, "data/simulated_data.csv", row.names = FALSE)
