@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repo has the scripts for exploring 
+This repo has the scripts for exploring number of marriages at each Civic Center in the GTA.
 
 ## File Structure
 
